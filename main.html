@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git & GitHub Guide</title>
+  <style>
+    :root { --dark:#24292f; --orange:#f05033; --blue:#0969da; --light:#f6f8fa; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial, sans-serif; color:var(--dark); background:var(--light); line-height:1.6; }
+    header { background:var(--dark); color:white; text-align:center; padding:48px 20px; }
+    header h1 { margin:0 0 8px; }
+    nav { background:white; text-align:center; padding:12px; position:sticky; top:0; box-shadow:0 2px 8px #0001; }
+    nav a { color:var(--blue); margin:0 12px; text-decoration:none; font-weight:bold; }
+    main { max-width:900px; margin:auto; padding:24px 20px 60px; }
+    section { background:white; border-radius:10px; padding:24px; margin:24px 0; box-shadow:0 2px 10px #0001; }
+    h2 { color:var(--orange); }
+    code { background:#eef1f4; padding:3px 6px; border-radius:4px; }
+    pre { background:var(--dark); color:white; padding:16px; border-radius:8px; overflow:auto; }
+    .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+    .card { border:1px solid #ddd; border-radius:8px; padding:16px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Git & GitHub</h1>
+    <p>A simple guide for tracking, sharing, and collaborating on code</p>
+  </header>
+
+  <nav>
+    <a href="#git">Git</a>
+    <a href="#github">GitHub</a>
+    <a href="#commands">Commands</a>
+    <a href="#workflow">Workflow</a>
+  </nav>
+
+  <main>
+    <section id="git">
+      <h2>What is Git?</h2>
+      <p><strong>Git</strong> is a free, open-source version control system. It records changes to files so you can review history, undo mistakes, and work on different features without disrupting the main project.</p>
+      <p>A repository (or <strong>repo</strong>) is a project folder that Git tracks.</p>
+    </section>
+
+    <section id="github">
+      <h2>What is GitHub?</h2>
+      <p><strong>GitHub</strong> is a cloud platform for hosting Git repositories. It adds collaboration tools such as pull requests, issue tracking, code reviews, and project dashboards.</p>
+      <p>Git works on your computer; GitHub stores and shares repositories on the internet.</p>
+    </section>
+
+    <section id="commands">
+      <h2>Common Git Commands</h2>
+      <pre><code>git init                    # Start a repository
+git clone &lt;url&gt;             # Copy a remote repository
+git status                  # View changed files
+git add &lt;file&gt;              # Stage a file
+git commit -m "message"     # Save a snapshot
+git push                    # Upload commits
+git pull                    # Download changes
+git branch &lt;name&gt;           # Create a branch</code></pre>
+    </section>
+
+    <section id="workflow">
+      <h2>Basic Workflow</h2>
+      <div class="steps">
+        <div class="card"><strong>1. Create</strong><p>Make a change or add a new file.</p></div>
+        <div class="card"><strong>2. Stage</strong><p>Choose the changes to include with <code>git add</code>.</p></div>
+        <div class="card"><strong>3. Commit</strong><p>Save a clear description with <code>git commit</code>.</p></div>
+        <div class="card"><strong>4. Share</strong><p>Send commits to GitHub with <code>git push</code>.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
